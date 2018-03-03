@@ -18,6 +18,16 @@
 
 .light-bg { background-color: rgb(224,224,224) }
 .dark-bg { background-color: rgb(32,32,32) }
+
+.background-image-content-center {
+  padding: 5rem;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid white;
+}
 /* UNIVERSAL STYLES */
 
 /* layout */
@@ -94,6 +104,14 @@ nav a {
   color: white;
 }
 
+/*------------ FOOTER  -------------*/
+/* styles */
 .instagram {
-  margin-bottom: -5.6px;
+  position: relative;
+  bottom: -5.6px;
+}
+
+/* img */
+.do-this-not-that {
+  background-image:url(../images/IMG_7578.jpg);
 }
