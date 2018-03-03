@@ -5,13 +5,13 @@ title: Finch and Sky
 <!-- Featured Blog Post -------------------->
   <section>
   <!-- background image here  -->
-    <div class="featured-post">
-      <a href="#"><h2>Feature Blog Post</h2>view more</a>
+    <div class="featured-post centered">
+      <a href="#"><h2>Feature Blog Post</h2><span>view more</span></a>
     </div>
   </section>
 <!-- Most Recent Blog Posts ------------------>
   <section class="grid">
-    {% for post in site.posts %}
+    {% for post in site.posts limit:4 %}
     <!-- does the following code for each post -->
     <a href="{{post.url}}" class="col-6">
       <article>

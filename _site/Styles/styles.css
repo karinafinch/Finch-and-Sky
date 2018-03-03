@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   border: 1px solid rgb(220,220,220);
 }
 
@@ -30,12 +31,22 @@ section {
 }
 
 .nav-bottom a, .nav-main a {
-  padding-left: 4.3rem;
-  padding-right: 4.3rem;
+  padding: 0.5rem 4.1rem 0.5rem 4.1rem;
 }
 
+.nav-main a {
+  margin: 0.53rem;
+}
+
+.nav-main {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
 /* Typography */
 /* font-family: 'Raleway', sans-serif; */
+.logo {
+  font-size: 5rem;
+}
 
 h1,h2,h3,h4,h5,h6,p {
   margin-bottom: 0.5rem;
@@ -45,8 +56,10 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 a {
+  color: black;
   text-decoration: none;
   border: 1px solid orange;
+  font-family:  'Raleway', sans-serif;
 }
 
 nav a {
