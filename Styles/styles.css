@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgb(220,220,220);
+}
+
+/* GENERAL HELPER CLASSES */
+.tall       { min-height: 100vh; }
+.med-height { min-height: 50vh; }
+.short      { min-height: 30vh; }
+
+.left { text-align: left; }
+.centered { text-align: center; }
+.right { text-align: right; }
+
+.no-padding { padding: 0; }
+
+.light-bg { background-color: rgb(224,224,224) }
+.dark-bg { background-color: rgb(32,32,32) }
+/* UNIVERSAL STYLES */
+/* layout */
+
+
+section {
+  padding: 10vh 5vw;
+}
+
+[class*=col] {
+  padding: 2%;
+}
+
+.nav-bottom a, .nav-main a {
+  padding-left: 4.3rem;
+  padding-right: 4.3rem;
+}
+
+/* Typography */
+/* font-family: 'Raleway', sans-serif; */
+
+h1,h2,h3,h4,h5,h6,p {
+  margin-bottom: 0.5rem;
+  border: 1px solid rgb(240,240,240);
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  border: 1px solid orange;
+}
+
+nav a {
+  display: inline-block;
+}
+
+.nav-top a, .nav-bottom a {
+  color: white;
+}

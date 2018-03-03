@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{page.title}}</title>
+    <title>Finch and Sky</title>
     <!-- Add icon library -->
     <link rel="stylesheet" type="text/css" href="/Styles/styles.css">
     <link rel="stylesheet" type="text/css" href="/Styles/gridlex.css">
@@ -26,11 +26,9 @@
         <div>
           <a href="#">
 
-            {% if page.name == 'index.html' %}
+            
             <h1 class="logo">finch + sky</h1>
-            {% else %}
-            <h2 class="logo">finch + sky</h2>
-            {% endif %}
+            
 
             <h5>explore.dream.discover.</h5>
           </a>
@@ -44,7 +42,59 @@
         </nav>
     </header>
 
-    {{content}}
+    <!-- Featured Blog Post -------------------->
+  <section>
+  <!-- background image here  -->
+    <div class="featured-post">
+      <a href="#"><h2>Feature Blog Post</h2>view more</a>
+    </div>
+  </section>
+<!-- Most Recent Blog Posts ------------------>
+  <section class="grid">
+    
+    <!-- does the following code for each post -->
+    <a href="/australia/2017/03/09/Tokyo-Eats-and-Drinks.html" class="col-6">
+      <article>
+        <div class="bg-image" style="background-image:url('images/IMG_0075.jpg')"></div>
+        <div class="article-text"><h2>Example Post 2</h2>
+        <p>There is no way to eat at every single restaurant in Tokyo but that is not going to stop me from trying...</p>
+        </div>
+      </article>
+    </a>
+    
+    <!-- does the following code for each post -->
+    <a href="/australia/2017/03/04/London-Dos-And-Donts.html" class="col-6">
+      <article>
+        <div class="bg-image" style="background-image:url('/images/IMG_7529.jpg')"></div>
+        <div class="article-text"><h2>Example Post</h2>
+        <p>Some say you have to go the South Bank to experience London but...</p>
+        </div>
+      </article>
+    </a>
+    
+  </section>
+<!-- Featured Post Categories ------------------>
+<section class="grid">
+  <a href="#">
+    <div class="col-4">
+    <!-- background image here -->
+      <h2>Do This Not That</h2>
+    </div>
+  </a>
+  <a href="#">
+    <div class="col-4">
+    <!-- background image here -->
+      <h2>Packing Guides</h2>
+    </div>
+  </a>
+  <a href="#">
+    <div class="col-4">
+      <!-- background image here -->
+    <h2>Short Trip Itinerary</h2>
+    </div>
+  </a>
+</section>
+
 
     <footer>
 

@@ -1,0 +1,24 @@
+---
+layout: sidebar
+---
+
+<div class="grid">
+  <div class="col-12">
+    <h1> {{page.category-name}}</h1>
+  </div>
+
+  {% for post in site.posts %}
+
+    <div class="col-4">
+    <a href="{{post.url}}">
+      <article>
+        <div class="bg-image" style="background-image:url('{{post.image}}')"></div>
+        <div class="article-text"><h2>{{post.title}}</h2>
+        <p>{{post.description}}</p>
+        </div>
+      </article>
+    </a>
+  </div>
+  {% endfor %}
+
+</div>

@@ -1,0 +1,46 @@
+---
+layout: default
+title: Finch and Sky
+---
+<!-- Featured Blog Post -------------------->
+  <section>
+  <!-- background image here  -->
+    <div class="featured-post">
+      <a href="#"><h2>Feature Blog Post</h2>view more</a>
+    </div>
+  </section>
+<!-- Most Recent Blog Posts ------------------>
+  <section class="grid">
+    {% for post in site.posts %}
+    <!-- does the following code for each post -->
+    <a href="{{post.url}}" class="col-6">
+      <article>
+        <div class="bg-image" style="background-image:url('{{post.image}}')"></div>
+        <div class="article-text"><h2>{{post.title}}</h2>
+        <p>{{post.description}}</p>
+        </div>
+      </article>
+    </a>
+    {% endfor %}
+  </section>
+<!-- Featured Post Categories ------------------>
+<section class="grid">
+  <a href="#">
+    <div class="col-4">
+    <!-- background image here -->
+      <h2>Do This Not That</h2>
+    </div>
+  </a>
+  <a href="#">
+    <div class="col-4">
+    <!-- background image here -->
+      <h2>Packing Guides</h2>
+    </div>
+  </a>
+  <a href="#">
+    <div class="col-4">
+      <!-- background image here -->
+    <h2>Short Trip Itinerary</h2>
+    </div>
+  </a>
+</section>
