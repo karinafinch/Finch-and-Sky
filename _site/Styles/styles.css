@@ -19,9 +19,8 @@
 .light-bg { background-color: rgb(224,224,224) }
 .dark-bg { background-color: rgb(32,32,32) }
 /* UNIVERSAL STYLES */
+
 /* layout */
-
-
 section {
   padding: 10vh 5vw;
 }
@@ -30,18 +29,6 @@ section {
   padding: 2%;
 }
 
-.nav-bottom a, .nav-main a {
-  padding: 0.5rem 4.1rem 0.5rem 4.1rem;
-}
-
-.nav-main a {
-  margin: 0.53rem;
-}
-
-.nav-main {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
 /* Typography */
 /* font-family: 'Raleway', sans-serif; */
 .logo {
@@ -62,10 +49,51 @@ a {
   font-family:  'Raleway', sans-serif;
 }
 
+
+/*----------------- NAVIGATION ------------ */
+
+.nav-bottom a, .nav-main a {
+  padding: 0.5rem 3.5rem 0.5rem 3.5rem;
+}
+
+.nav-main a {
+  margin: 0.53rem;
+}
+
+.nav-main {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
 nav a {
   display: inline-block;
 }
 
 .nav-top a, .nav-bottom a {
   color: white;
+}
+
+.dropdown-nav {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  left: 0;
+  top: 1.2rem;
+  padding-top: .2rem;
+  background-color: white;
+  display: none;
+}
+
+.dropdown-nav:hover .dropdown-content {
+  display: block;
+}
+
+.nav-top a, .nav-bottom a {
+  color: white;
+}
+
+.instagram {
+  margin-bottom: -5.6px;
 }

@@ -1,0 +1,9 @@
+---
+layout: sidebar
+---
+
+{% for post in site.posts %}
+
+<div> {{post.title}} {{ post.date | date_to_long_string }} </div>
+
+{% endfor %}
