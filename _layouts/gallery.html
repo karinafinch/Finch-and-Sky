@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div>
+  <h1>{{page.title}}</h1>
+</div>
+
+<section class="grid">
+
+  {% for photo in page.photos %}
+
+  <div class="col-3">
+    <img src="{{photo.link}}" alt="{{photo.description}}">
+  </div>
+
+  {% endfor %}
+
+</section>
