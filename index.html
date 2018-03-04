@@ -55,39 +55,43 @@ title: Finch and Sky
 </section>
 
 <!-- Split 2 Column Small posts display ------------------>
-<!-- Food posts ------------------>
 <section class="grid">
-  <div class="col-6">
-    <h2>Food! Yum!</h2>
+<!-- Food posts ------------------>
+<div class="col-6">
+    <h2>Food! YUM!</h2>
   {% for post in site.posts limit:3 %}
     <!-- does the following code for each post -->
-    <a href="{{post.url}}" class="small-post-preview">
-      <article>
-        <div class="bg-image img-left" style="background-image:url('{{post.image}}')"></div>
-        <div class="post-text-right">
-          <h2 class="left">{{post.title}}</h2>
-          <p>{{post.description}}</p>
+
+      <a href="{{post.url}}" class="small-post-preview">
+        <article class="grid">
+          <div class="col-4 bg-image img-left" style="background-image:url('{{post.image}}')">
+          </div>
+          <div class="col-8 post-text-right">
+            <h2 class="left">{{post.title}}</h2>
+            <p>{{post.description}}</p>
+          </div>
           <!-- <p class="view-more centered">view more</p> -->
-        </div>
-      </article>
-    </a>
+        </article>
+      </a>
   {% endfor %}
-  </div>
+</div>
 <!-- My favorite posts ------------------>
-  <div class="col-6">
-    <h2>Food! Yum!</h2>
+<div class="col-6">
+    <h2>My Favorite</h2>
   {% for post in site.posts limit:3 %}
     <!-- does the following code for each post -->
-    <a href="{{post.url}}" class="small-post-preview">
-      <article>
-        <div class="bg-image img-left" style="background-image:url('{{post.image}}')"></div>
-        <div class="post-text-right">
-          <h2 class="left">{{post.title}}</h2>
-          <p>{{post.description}}</p>
+
+      <a href="{{post.url}}" class="small-post-preview">
+        <article class="grid">
+          <div class="col-4 bg-image img-left" style="background-image:url('{{post.image}}')">
+          </div>
+          <div class="col-8 post-text-right">
+            <h2 class="left">{{post.title}}</h2>
+            <p>{{post.description}}</p>
+          </div>
           <!-- <p class="view-more centered">view more</p> -->
-        </div>
-      </article>
-    </a>
+        </article>
+      </a>
   {% endfor %}
-  </div>
+</div>
 </section>

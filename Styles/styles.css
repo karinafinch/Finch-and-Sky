@@ -139,6 +139,10 @@ nav a {
   position: relative;
 }
 
+.dropdown-nav a {
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
 .dropdown-content li {
   list-style: none;
 }
@@ -153,6 +157,29 @@ nav a {
 }
 
 .dropdown-nav:hover .dropdown-content {
+  display: block;
+}
+
+.sub-dropdown-nav {
+  position: relative;
+}
+
+.sub-dropdown-content li {
+  list-style: none;
+  border: 1px solid rgb(240,240,240);
+}
+
+.sub-dropdown-content {
+  position: absolute;
+  left: 134px;
+  top: -0.8rem;
+  padding-top: .2rem;
+  background-color: white;
+  display: none;
+  border: 1px solid rgb(240,240,240);
+}
+
+.sub-dropdown-nav:hover .sub-dropdown-content {
   display: block;
 }
 
@@ -227,7 +254,7 @@ nav a {
 
 /*------------ Small Preview 2 Column  -------------*/
 /* for image float left and text to right */
-.img-left {
+/* .img-left {
   float: left;
   min-height: 0;
   margin-right: 10px;
@@ -241,6 +268,18 @@ nav a {
     margin-left: 0px;
     overflow: auto;
     display: block;
+} */
+
+.img-left {
+  min-height: 14vw;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.post-text-right {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
 }
 /* -------------------- */
 /*------------ FOOTER  -------------*/
