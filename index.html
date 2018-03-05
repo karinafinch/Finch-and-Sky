@@ -57,9 +57,9 @@ title: Finch and Sky
 <!-- Split 2 Column Small posts display ------------------>
 <section class="grid">
 <!-- Food posts ------------------>
-<div class="col-6">
-    <h2>Food! YUM!</h2>
-  {% for post in site.posts limit:3 %}
+<div class="col-6 border-left">
+    <h3>Food! YUM!</h3>
+  {% for post in site.categories.food limit:3 %}
     <!-- does the following code for each post -->
 
       <a href="{{post.url}}" class="small-post-preview">
@@ -76,9 +76,9 @@ title: Finch and Sky
   {% endfor %}
 </div>
 <!-- My favorite posts ------------------>
-<div class="col-6">
-    <h2>My Favorite</h2>
-  {% for post in site.posts limit:3 %}
+<div class="col-6 border-left">
+    <h3>My Favorite</h3>
+  {% for post in site.categories.featured limit:3 %}
     <!-- does the following code for each post -->
 
       <a href="{{post.url}}" class="small-post-preview">

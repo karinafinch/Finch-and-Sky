@@ -5,6 +5,14 @@
   /* border: 1px solid rgb(220,220,220); */
 }
 
+@font-face {
+    font-family: 'loveloblack';
+    src: url('../fonts/lovelo_black-webfont.woff2') format('woff2'),
+         url('../fonts/lovelo_black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 img {
   max-width: 100%;
 }
@@ -23,16 +31,22 @@ img {
 .right { text-align: right; }
 
 .no-padding { padding: 0; }
-.padded-15 {padding: 5%}
+.padded-1 {padding:1%}
+
+.padding-left {padding-left: 2rem}
 
 .light-bg { background-color: rgb(224,224,224) }
 .dark-bg { background-color: rgb(136,136,136) }
 
 .bg-cover {
-  background-size: cover;
-  background-position: center;
+    background-size: cover;
+    background-position: center;
 }
 
+.border-left {
+  border-left: 1px solid rgb(240,240,240);
+  padding-left: 2rem;
+}
 .bg-image {
     min-height: 25vw;
     background-position: center;
@@ -43,7 +57,15 @@ img {
     margin-top: 1.5rem;
     margin-bottom: 1.9rem;
   }
+.blog-image {
+  background-position: center;
+  background-size: cover;
+  padding-bottom:60%;
+}
 
+.blog-image.tall {
+    padding-bottom:150%;
+}
 
 .post-preview {
     border: 20px solid white;
@@ -78,7 +100,7 @@ h1,h2,h3,h4,h5,h6 {
   /* margin-bottom: 0.5rem; */
   /* border: 1px solid rgb(240,240,240); */
   text-align: center;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'loveloblack';
   line-height: 1.5;
 }
 
@@ -92,20 +114,37 @@ a {
   color: inherit;
   text-decoration: none;
   /* border: 1px solid orange; */
-  font-family:
 }
 
 h2 {
   font-size: 1.1rem;
+  font-family: 'loveloblack';
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
 }
 
 .post-preview h2 {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'loveloblack';
   padding-bottom: 7px;
 }
 
 .view-more {
   font-size: 0.8rem;
+}
+
+.view-more {
+  border: 1.5px solid black;
+  margin-right: 11rem ;
+  margin-top: 1.25rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.page-title {
+  margin-top: 2rem;
 }
 /*----------------- NAVIGATION ------------ */
 
@@ -114,7 +153,7 @@ h2 {
 }
 
 .nav-main a {
-  margin: 0.53rem;
+  padding: 1rem 2rem;
 }
 
 .nav-main {
@@ -135,61 +174,28 @@ nav a {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.dropdown-nav {
-  position: relative;
-}
 
-.dropdown-nav a {
-  padding: 0.5rem 2rem 0.5rem 2rem;
-}
+.dropdown-nav {}
 
-.dropdown-content li {
-  list-style: none;
-}
-
-.dropdown-content {
-  position: absolute;
-  left: 0;
-  top: 1.2rem;
-  padding-top: .2rem;
+.dropdown-nav-menu {
   background-color: white;
-  display: none;
-}
-
-.dropdown-nav:hover .dropdown-content {
-  display: block;
-}
-
-.sub-dropdown-nav {
-  position: relative;
-}
-
-.sub-dropdown-content li {
-  list-style: none;
-  border: 1px solid rgb(240,240,240);
-}
-
-.sub-dropdown-content {
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
-  left: 134px;
-  top: -0.8rem;
-  padding-top: .2rem;
-  background-color: white;
-  display: none;
-  border: 1px solid rgb(240,240,240);
+  width: 100%;
+  padding: 1% 5%;
+  transition: ease-in-out 0.3s;
 }
 
-.sub-dropdown-nav:hover .sub-dropdown-content {
-  display: block;
+.dropdown-nav-menu li {
+  list-style: none;
+  text-align: left;
+}
+.dropdown-nav:hover .dropdown-nav-menu, .dropdown-nav-menu:hover {
+  visibility: visible;
+  opacity: 1;
 }
 
-.view-more {
-  border: 1.5px solid black;
-  margin-right: 11rem ;
-  margin-top: 1.25rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-}
 /*------------ FEATURED-INDEX -------------*/
 #featured {
   padding: 16vh 8vw;
@@ -235,8 +241,6 @@ nav a {
 /*------------ CATEGORIES-INDEX  -------------*/
 #categories {
   min-height: 50vh;
-  border-top: 1px solid rgb(208,208,208);
-  border-bottom: 1px solid rgb(208,208,208);
 }
 
 #categories a {
@@ -281,14 +285,33 @@ nav a {
   padding-left: 2rem;
   margin-bottom: 2rem;
 }
-/* -------------------- */
-/*------------ FOOTER  -------------*/
+/* ------------ASIDE----------------------------- */
+
+/* -----------CONTACT FORM-------------------- */
+input, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    background-color: rgb(220,220,220);
+ }
+
+form {
+  margin: 3rem 15rem 3rem 15rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid grey;
+}
+/*--------------- FOOTER  ---------------------*/
 /* styles */
 .instagram {
   position: relative;
   bottom: -5.6px;
 }
 
+footer {
+  margin-top: 4rem;
+}
 /* img */
 .do-this-not-that-bg {
   background-image:url(../images/IMG_7578.jpg);
@@ -309,6 +332,10 @@ nav a {
   background-size: cover;
 }
 
-.category-preview {
+/* .category-preview {
   border: 20px solid white;
+} */
+
+.munich-bp-img {
+  background-image: url(..images/IMG_0075.jpg);
 }

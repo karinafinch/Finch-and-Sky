@@ -1,7 +1,7 @@
 function initialise () {
 
   console.log('yeh');
-  $(".nav-main").stick_in_parent();
+  $("#fixed-menu").stick_in_parent();
 
 }
 

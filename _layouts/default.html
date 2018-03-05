@@ -41,41 +41,17 @@
 
     </header>
 
-    <nav class="nav-main centered">
+    <nav id="fixed-menu" class="nav-main centered">
       <span>
-      <a href="/">Home</a>
+        <a href="/">Home</a>
       </span>
       <span class="dropdown-nav">
         <a href="#">Places</a>
-        <div class="dropdown-content">
-          <ul>
-            <li>
-              <span class="sub-dropdown-nav">
-                <a href="#">Europe</a>
-                <div class="sub-dropdown-content">
-                  <ul>
-                    <li><a href="#">Germany</a></li>
-                    <li><a href="#">France</a></li>
-                    <li><a href="#">Iceland</a></li>
-                    <li><a href="#">Ireland</a></li>
-                    <li><a href="#">England</a></li>
-                    <li><a href="#">Italy</a></li>
-                  </ul>
-                </div>
-              </span>
-            </li>
-            <li><a href="#">Africa</a></li>
-            <li><a href="#">Asia</a></li>
-            <li><a href="#">North America</a></li>
-            <li><a href="#">Central America</a></li>
-            <li><a href="#">South America</a></li>
-            <li><a href="#">Ocaeania</a></li>
-          </ul>
-        </div>
+        {% include location-nav.html %}
       </span>
       <span class="dropdown-nav">
         <a href="#">Travel Tips</a>
-        <div class="dropdown-content">
+        <div class="dropdown-nav-menu">
           <ul>
             <li><a href="/do-this-not-that">Do This Not That</a></li>
             <li><a href="/packing-guides">Packing Guides</a></li>
@@ -83,9 +59,6 @@
           </ul>
         </div>
       </span>
-      <!-- <span class="dropdown-nav">
-           <a href="">Recommendations</a>
-           <div class="dropdown-content"> -->
       <a href="/inspiration">Inspiration</a>
       <a href="/contact">Contact</a>
     </nav>

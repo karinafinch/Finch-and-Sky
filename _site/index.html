@@ -39,41 +39,73 @@
 
     </header>
 
-    <nav class="nav-main centered">
+    <nav id="fixed-menu" class="nav-main centered">
       <span>
-      <a href="/">Home</a>
+        <a href="/">Home</a>
       </span>
       <span class="dropdown-nav">
         <a href="#">Places</a>
-        <div class="dropdown-content">
-          <ul>
-            <li>
-              <span class="sub-dropdown-nav">
-                <a href="#">Europe</a>
-                <div class="sub-dropdown-content">
-                  <ul>
-                    <li><a href="#">Germany</a></li>
-                    <li><a href="#">France</a></li>
-                    <li><a href="#">Iceland</a></li>
-                    <li><a href="#">Ireland</a></li>
-                    <li><a href="#">England</a></li>
-                    <li><a href="#">Italy</a></li>
-                  </ul>
-                </div>
-              </span>
-            </li>
-            <li><a href="#">Africa</a></li>
-            <li><a href="#">Asia</a></li>
-            <li><a href="#">North America</a></li>
-            <li><a href="#">Central America</a></li>
-            <li><a href="#">South America</a></li>
-            <li><a href="#">Ocaeania</a></li>
-          </ul>
-        </div>
+        <div class="grid dropdown-nav-menu">
+  <div class="col-2">
+    <a href="#" class="col-2">
+      Europe
+    </a>
+    <ul>
+      <li>
+        <a href="#">
+          Germany
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Italy
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Spain
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Iceland
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-2">
+    <a href="#">
+      Europe
+    </a>
+    <ul>
+      <li>
+        <a href="#">
+          Germany
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Italy
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Spain
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Iceland
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
       </span>
       <span class="dropdown-nav">
         <a href="#">Travel Tips</a>
-        <div class="dropdown-content">
+        <div class="dropdown-nav-menu">
           <ul>
             <li><a href="/do-this-not-that">Do This Not That</a></li>
             <li><a href="/packing-guides">Packing Guides</a></li>
@@ -81,9 +113,6 @@
           </ul>
         </div>
       </span>
-      <!-- <span class="dropdown-nav">
-           <a href="">Recommendations</a>
-           <div class="dropdown-content"> -->
       <a href="/inspiration">Inspiration</a>
       <a href="/contact">Contact</a>
     </nav>
@@ -103,19 +132,19 @@
 <section class="grid">
   
     <!-- does the following code for each post -->
-    <a href="/demo/2018/03/02/Tina-Blog-Demo.html" class="col-4 post-preview">
+    <a href="/featured/2018/03/02/Tina-Blog-Demo.html" class="col-4 post-preview">
       <article>
         <div class="bg-image" style="background-image:url('/images/IMG_7529.jpg')"></div>
         <div>
           <h2 class="left">Tina Blog Demo</h2>
-          <p>Making Blog Posts with Jekyll probably will be really great but right now it is making me crazy and I feel like I am losing my mind</p>
+          <p>Making Blog Posts with Jekyll probably will be really great but right now it is making me crazy and I feel like</p>
           <p class="view-more centered">view more</p>
         </div>
       </article>
     </a>
   
     <!-- does the following code for each post -->
-    <a href="/california/2017/09/07/Santa-Cruz.html" class="col-4 post-preview">
+    <a href="/california/featured/2017/09/07/Santa-Cruz.html" class="col-4 post-preview">
       <article>
         <div class="bg-image" style="background-image:url('/images/IMG_7529.jpg')"></div>
         <div>
@@ -127,19 +156,19 @@
     </a>
   
     <!-- does the following code for each post -->
-    <a href="/california/2017/08/09/Sausalito.html" class="col-4 post-preview">
+    <a href="/california/featured/2017/08/09/Sausalito.html" class="col-4 post-preview">
       <article>
         <div class="bg-image" style="background-image:url('/images/IMG_7529.jpg')"></div>
         <div>
           <h2 class="left">Example Post Sausalito</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur</p>
+          <p>Lorem ipsum dolor sit amet, consectetur iqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco..</p>
           <p class="view-more centered">view more</p>
         </div>
       </article>
     </a>
   
     <!-- does the following code for each post -->
-    <a href="/california/2017/03/09/San-Diego.html" class="col-4 post-preview">
+    <a href="/california/food/2017/03/09/San-Diego.html" class="col-4 post-preview">
       <article>
         <div class="bg-image" style="background-image:url('/images/IMG_7529.jpg')"></div>
         <div>
@@ -151,7 +180,7 @@
     </a>
   
     <!-- does the following code for each post -->
-    <a href="/california/usa/2017/03/04/San-Francisco.html" class="col-4 post-preview">
+    <a href="/california/usa/food/2017/03/04/San-Francisco.html" class="col-4 post-preview">
       <article>
         <div class="bg-image" style="background-image:url('/images/IMG_7529.jpg')"></div>
         <div>
@@ -163,7 +192,7 @@
     </a>
   
     <!-- does the following code for each post -->
-    <a href="/california/usa/2016/08/12/Sacramento.html" class="col-4 post-preview">
+    <a href="/california/usa/food/2016/08/12/Sacramento.html" class="col-4 post-preview">
       <article>
         <div class="bg-image" style="background-image:url('/images/IMG_0075.jpg')"></div>
         <div>
@@ -203,26 +232,12 @@
 <!-- Split 2 Column Small posts display ------------------>
 <section class="grid">
 <!-- Food posts ------------------>
-<div class="col-6">
-    <h2>Food! YUM!</h2>
+<div class="col-6 border-left">
+    <h3>Food! YUM!</h3>
   
     <!-- does the following code for each post -->
 
-      <a href="/demo/2018/03/02/Tina-Blog-Demo.html" class="small-post-preview">
-        <article class="grid">
-          <div class="col-4 bg-image img-left" style="background-image:url('/images/IMG_7529.jpg')">
-          </div>
-          <div class="col-8 post-text-right">
-            <h2 class="left">Tina Blog Demo</h2>
-            <p>Making Blog Posts with Jekyll probably will be really great but right now it is making me crazy and I feel like I am losing my mind</p>
-          </div>
-          <!-- <p class="view-more centered">view more</p> -->
-        </article>
-      </a>
-  
-    <!-- does the following code for each post -->
-
-      <a href="/california/2017/09/07/Santa-Cruz.html" class="small-post-preview">
+      <a href="/california/food/2017/03/09/San-Diego.html" class="small-post-preview">
         <article class="grid">
           <div class="col-4 bg-image img-left" style="background-image:url('/images/IMG_7529.jpg')">
           </div>
@@ -236,13 +251,27 @@
   
     <!-- does the following code for each post -->
 
-      <a href="/california/2017/08/09/Sausalito.html" class="small-post-preview">
+      <a href="/california/usa/food/2017/03/04/San-Francisco.html" class="small-post-preview">
         <article class="grid">
           <div class="col-4 bg-image img-left" style="background-image:url('/images/IMG_7529.jpg')">
           </div>
           <div class="col-8 post-text-right">
-            <h2 class="left">Example Post Sausalito</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur</p>
+            <h2 class="left">Example Post San Francisco</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <!-- <p class="view-more centered">view more</p> -->
+        </article>
+      </a>
+  
+    <!-- does the following code for each post -->
+
+      <a href="/california/usa/food/2016/08/12/Sacramento.html" class="small-post-preview">
+        <article class="grid">
+          <div class="col-4 bg-image img-left" style="background-image:url('/images/IMG_0075.jpg')">
+          </div>
+          <div class="col-8 post-text-right">
+            <h2 class="left">Example Post Sacramento</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
           </div>
           <!-- <p class="view-more centered">view more</p> -->
         </article>
@@ -250,18 +279,18 @@
   
 </div>
 <!-- My favorite posts ------------------>
-<div class="col-6">
-    <h2>My Favorite</h2>
+<div class="col-6 border-left">
+    <h3>My Favorite</h3>
   
     <!-- does the following code for each post -->
 
-      <a href="/demo/2018/03/02/Tina-Blog-Demo.html" class="small-post-preview">
+      <a href="/featured/2018/03/02/Tina-Blog-Demo.html" class="small-post-preview">
         <article class="grid">
           <div class="col-4 bg-image img-left" style="background-image:url('/images/IMG_7529.jpg')">
           </div>
           <div class="col-8 post-text-right">
             <h2 class="left">Tina Blog Demo</h2>
-            <p>Making Blog Posts with Jekyll probably will be really great but right now it is making me crazy and I feel like I am losing my mind</p>
+            <p>Making Blog Posts with Jekyll probably will be really great but right now it is making me crazy and I feel like</p>
           </div>
           <!-- <p class="view-more centered">view more</p> -->
         </article>
@@ -269,7 +298,7 @@
   
     <!-- does the following code for each post -->
 
-      <a href="/california/2017/09/07/Santa-Cruz.html" class="small-post-preview">
+      <a href="/california/featured/2017/09/07/Santa-Cruz.html" class="small-post-preview">
         <article class="grid">
           <div class="col-4 bg-image img-left" style="background-image:url('/images/IMG_7529.jpg')">
           </div>
@@ -283,13 +312,13 @@
   
     <!-- does the following code for each post -->
 
-      <a href="/california/2017/08/09/Sausalito.html" class="small-post-preview">
+      <a href="/california/featured/2017/08/09/Sausalito.html" class="small-post-preview">
         <article class="grid">
           <div class="col-4 bg-image img-left" style="background-image:url('/images/IMG_7529.jpg')">
           </div>
           <div class="col-8 post-text-right">
             <h2 class="left">Example Post Sausalito</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur</p>
+            <p>Lorem ipsum dolor sit amet, consectetur iqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco..</p>
           </div>
           <!-- <p class="view-more centered">view more</p> -->
         </article>
