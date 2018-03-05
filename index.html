@@ -3,19 +3,23 @@ layout: default
 title: Finch and Sky
 ---
 <!-- Featured Blog Post -------------------->
-<section id="featured" class="grid-middle-center-noBottom-noGutter bg-cover">
+
+{% for post in site.posts limit:1 %}
+<section id="featured" class="grid-middle-center-noBottom-noGutter bg-cover" style="background-image:url('{{post.image}}')">
   <div class="col-6">
-    <a href="#">
-      <h2>Feature Blog Post</h2>
+    <a href="{{post.url}}">
+      <h2>{{post.title}}</h2>
       <p class="centered">View more</p>
     </a>
   </div>
 </section>
-
+{% endfor %}
 
 <!-- Most Recent Blog Posts ------------------>
 <section class="grid">
-  {% for post in site.posts limit:6 %}
+
+  {% for post in site.posts limit:6 offset:1 %}
+
     <!-- does the following code for each post -->
     <a href="{{post.url}}" class="col-4 post-preview">
       <article>
@@ -27,7 +31,9 @@ title: Finch and Sky
         </div>
       </article>
     </a>
+
   {% endfor %}
+
 </section>
 
 
@@ -59,6 +65,7 @@ title: Finch and Sky
 <!-- Food posts ------------------>
 <div class="col-6 border-left">
     <h3>Food! YUM!</h3>
+
   {% for post in site.categories.food limit:3 %}
     <!-- does the following code for each post -->
 
@@ -74,6 +81,7 @@ title: Finch and Sky
         </article>
       </a>
   {% endfor %}
+
 </div>
 <!-- My favorite posts ------------------>
 <div class="col-6 border-left">

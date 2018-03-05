@@ -31,12 +31,21 @@ img {
 .right { text-align: right; }
 
 .no-padding { padding: 0; }
-.padded-1 {padding:1%}
+
+.padded-1,
+[class*=col].padded-1 {padding:1%}
+
+[class*=col].padded-5,
+.padded-5 {
+  padding: 5%;
+}
 
 .padding-left {padding-left: 2rem}
 
+.margin-bottom {margin-bottom: 1rem;}
+
 .light-bg { background-color: rgb(224,224,224) }
-.dark-bg { background-color: rgb(136,136,136) }
+.dark-bg { background-color: #eeeeee }
 
 .bg-cover {
     background-size: cover;
@@ -84,6 +93,7 @@ img {
 /* layout */
 section {
   padding: 10vh 10vw;
+  border-bottom: 1px solid #eeeeee;
 }
 
 /* Typography */
@@ -116,6 +126,12 @@ a {
   /* border: 1px solid orange; */
 }
 
+nav a:hover,
+p a:hover {
+  color: grey;
+}
+h1 {font-size: 2rem;}
+
 h2 {
   font-size: 1.1rem;
   font-family: 'loveloblack';
@@ -126,26 +142,51 @@ h3 {
   margin-bottom: 2rem;
 }
 
-.post-preview h2 {
-  font-family: 'loveloblack';
-  padding-bottom: 7px;
-}
-
-.view-more {
-  font-size: 0.8rem;
-}
-
-.view-more {
-  border: 1.5px solid black;
-  margin-right: 11rem ;
-  margin-top: 1.25rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-}
 
 .page-title {
   margin-top: 2rem;
 }
+
+/* blog post typography */
+.blog-post h2,
+.blog-post h3,
+.blog-post h4,
+.blog-post h5 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.blog-post a {
+  font-weight: bold;
+  color: grey;
+  border-bottom: 1px solid grey;
+}
+
+.blog-post a:hover,
+a.tag:hover  {
+  border-color: teal;
+  color: teal;
+  transition: all 0.5s;
+}
+
+a.tag {
+  border: 1px solid grey;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  color: grey;
+  text-transform: uppercase;
+  letter-spacing:2px;
+}
+
+
+/*----------------- HEADER ------------ */
+
+.header {
+  margin: 2rem 0;
+}
+
+
 /*----------------- NAVIGATION ------------ */
 
 .nav-bottom a, .nav-main a {
@@ -175,22 +216,33 @@ nav a {
   padding-right: 2rem;
 }
 
-.dropdown-nav {}
-
 .dropdown-nav-menu {
-  background-color: white;
+  background-color: #eeeeee;
   visibility: hidden;
   opacity: 0;
   position: absolute;
   width: 100%;
   padding: 1% 5%;
   transition: ease-in-out 0.3s;
+  }
+
+.dropdown-nav-menu a {
+  padding: 1rem;
+  display: block;
+  text-align: left;
 }
 
 .dropdown-nav-menu li {
   list-style: none;
-  text-align: left;
 }
+
+.dropdown-nav-menu h4 {
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 0 1rem;
+}
+
 .dropdown-nav:hover .dropdown-nav-menu, .dropdown-nav-menu:hover {
   visibility: visible;
   opacity: 1;
@@ -198,7 +250,7 @@ nav a {
 
 /*------------ FEATURED-INDEX -------------*/
 #featured {
-  padding: 16vh 8vw;
+  padding: 23vh 8vw;
   color: white;
   background-image: url('../images/IMG_1415.jpg');
   margin: 2rem;
@@ -234,13 +286,24 @@ nav a {
   margin: 2rem; */
 .view-more {
     border: 1.5px solid black;
-    margin-right: 13rem ;
+    /* margin-right: 13rem ; */
     margin-top: 1.25rem;
     padding: 0.6rem;
+    display: inline-block;
+  }
+
+.post-preview h2 {
+    font-family: 'loveloblack';
+    padding-bottom: 7px;
+  }
+
+.view-more {
+    font-size: 0.8rem;
   }
 /*------------ CATEGORIES-INDEX  -------------*/
 #categories {
   min-height: 50vh;
+  /* border-bottom: 1px solid #eeeeee; */
 }
 
 #categories a {
@@ -286,6 +349,12 @@ nav a {
   margin-bottom: 2rem;
 }
 /* ------------ASIDE----------------------------- */
+
+aside > div {
+  padding:1rem;
+  border: 1px solid rgb(230,230,230);
+  margin: 0.5rem 0;
+}
 
 /* -----------CONTACT FORM-------------------- */
 input, textarea {

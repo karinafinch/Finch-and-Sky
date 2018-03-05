@@ -1,19 +1,23 @@
 ---
 layout: default
 ---
-<h1>{{page.title}}</h1>
-<h3>{{page.sub-heading}}</h3>
 
-<a href="https://web.facebook.com/FinchSky-1762462977382990/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/finchandsky/" target="blank"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-pinterest"></i></a>
-<a href="#"><i class="fab fa-youtube"></i></a>
-<a href="mailto:finchandsky@gmail.com"><i class="far fa-envelope"></i></a>
+<section class="padded-5">
 
-<section>
+  <h1>{{page.title}}</h1>
+  <h3>{{page.sub-heading}}</h3>
+  <nav class="centered margin-bottom">
+      <a href="https://web.facebook.com/FinchSky-1762462977382990/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/finchandsky/" target="blank"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-pinterest"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="mailto:finchandsky@gmail.com"><i class="far fa-envelope"></i></a>
+  </nav>
+  <div class="blog-post">
 
   {{content}}
 
+  </div>
 </section>
 
 <section>
@@ -23,5 +27,13 @@ layout: default
       <div class="blog-image {{image.height}}" style="background-image:url({{image.path}})"></div>
     </div>
     {% endfor %}
+</div>
+<div class="padded-5 centered">
+  <h3> Explore Categories </h3>
+
+  {% for category in site.categories %}
+  <a href="/category/{{category[0]}}" class="tag"> {{category[0]}}</a>
+  {% endfor %}
+
 </div>
 </section>

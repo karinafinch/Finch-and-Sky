@@ -1,0 +1,14 @@
+collections:
+  posts:
+    output: true
+    permalink: /:year/:path
+
+jekyll-archives:
+  enabled: true
+  layout: 'post-category-page'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
