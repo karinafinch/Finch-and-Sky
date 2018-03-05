@@ -215,7 +215,7 @@ nav a {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-
+/*----------- drop-down--------*/
 .dropdown-nav-menu {
   background-color: #eeeeee;
   visibility: hidden;
@@ -246,6 +246,14 @@ nav a {
 .dropdown-nav:hover .dropdown-nav-menu, .dropdown-nav-menu:hover {
   visibility: visible;
   opacity: 1;
+}
+
+/*------------ tips drop down ------------*/
+
+#travel-tips-dropdown a {
+    padding: 5rem 2rem;
+    border: 1px solid grey;
+    margin: 2rem 3rem;
 }
 
 /*------------ FEATURED-INDEX -------------*/
