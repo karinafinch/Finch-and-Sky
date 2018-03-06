@@ -1,22 +1,9 @@
 ---
 layout: default
 ---
-
 <div>
   <h1>{{page.title}}</h1>
 </div>
-
 <section class="grid">
-
-  {% for photo in page.photos %}
-
-<div class="col-3 gallery">
-  <a target="_blank" href="{{photo.link}}">
-    <img src="{{photo.link}}" alt="{{photo.title}}" width="{{photo.width}}" height="{{photo.height}}">
-  </a>
-  <!-- <div class="desc">"{{photo.description}}"</div> -->
-</div>
-
-  {% endfor %}
-
+  {% include gallery.html photos=page.images %}
 </section>

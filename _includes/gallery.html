@@ -1,0 +1,7 @@
+<div class="grid">
+  {% for image in include.photos %}
+    <div class="{{image.size}} padded-1">
+      <div class="blog-image {{image.height}}" style="background-image:url({{image.path}})"></div>
+    </div>
+  {% endfor %}
+</div>
